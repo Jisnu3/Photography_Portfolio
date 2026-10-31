@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Jisnu Hazra Photography</title>
+  <meta name="description" content="Secure administrative login portal for Jisnu Hazra Photography portfolio management.">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
+</head>
+<body>
+
+  <!-- Background Imagery & Ambient Lighting -->
+  <img src="assets/images/hero_sunset.jpg" alt="Atmospheric Photography Backdrop" class="login-bg-media">
+  <div class="login-bg-overlay"></div>
+  <div class="ambient-glow"></div>
+
+  <!-- Login Card Box -->
+  <div class="login-wrapper">
+    <div class="login-card">
+      
+      <!-- Brand & Icon Header -->
+      <div class="login-header">
+        <div class="login-icon-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h1 class="brand-heading">JISNU HAZRA</h1>
+        <p class="brand-subheading">ADMIN PORTAL LOGIN</p>
+      </div>
+
+      <!-- Quick Demo Credentials Tip -->
+      <div class="demo-tip-box">
+        <div>
+          <strong>Firebase Admin:</strong> jisnuhazra@gmail.com / Jisnu@123
+        </div>
+        <button type="button" class="btn-autofill" id="autofillBtn">Auto-fill</button>
+      </div>
+
+      <!-- Error message banner -->
+      <div class="login-error-banner" id="errorBanner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span id="errorMsg">Invalid credentials</span>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+        <!-- Email/Username -->
+        <div class="form-group">
+          <label class="form-label" for="adminEmail">Email Address or Username</label>
+          <div class="input-icon-wrap">
+            <input type="text" id="adminEmail" class="form-input" placeholder="admin@jisnuhazra.com" required autocomplete="username">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label class="form-label" for="adminPassword">Password</label>
+          <div class="input-icon-wrap">
+            <input type="password" id="adminPassword" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <button type="button" class="toggle-password-btn" id="togglePassword" aria-label="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Helpers -->
+        <div class="form-helper-row">
+          <label class="remember-label">
+            <input type="checkbox" id="rememberMe" checked>
+            <span>Remember this device</span>
+          </label>
+          <a href="#" class="forgot-link" onclick="alert('Demo password is: admin123'); return false;">Forgot?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-login-submit" id="loginSubmitBtn">
+          <span>Sign In to Admin</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Return to Portfolio Website -->
+      <div class="login-card-footer">
+        <a href="index.html" class="back-website-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Return to Portfolio Website</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/login.js"></script>
+</body>
+</html>
